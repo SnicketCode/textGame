@@ -1,6 +1,5 @@
 package game;
 
-
 public class main {
 
     public static void main(String args[]) {
@@ -14,11 +13,9 @@ public class main {
         int x = 0;
         int y = 0;
         
-
         // My greedy credit
     	System.out.println("Jakub's Text Adventure");
 
-    	
     	
     	// Print starting room description generated from RoomInit Class
     	RoomsInit.print(room, x, y);

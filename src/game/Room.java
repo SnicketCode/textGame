@@ -1,5 +1,6 @@
 package game;
 
+import java.util.ArrayList;
 
 class RoomsInit {
 
@@ -15,6 +16,7 @@ class RoomsInit {
         room[0][0].setNumber(1);
         room[0][0].setName("Hill");
         room[0][0].setDescription("You are on a hill. It overlooks a dreamy view of the village to the south.");
+        room[0][0].addItem(new Item("Pinecone", "It's prickly and it hurts."));
 
 
 
@@ -46,6 +48,7 @@ class Room {
     private int number;
     private String name;
     private String description;
+    private ArrayList<Item> Items = new ArrayList<Item>();
 
     public Room(int number, String name, String description) {
 
@@ -74,4 +77,16 @@ class Room {
     public String getDescription() {
         return this.description;
     }
+    
+    public void addItem(Item item)
+    {
+    	Items.add(item);
+    }
+    
+    public void removeItem(Item item)
+    {
+    	Items.remove(item);
+    }
+    
+ 
 }
