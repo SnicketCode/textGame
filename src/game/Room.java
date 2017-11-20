@@ -22,7 +22,7 @@ class RoomsInit {
 
         room[0][1].setNumber(2);
         room[0][1].setName("Village");
-        room[0][1].setDescription("The village you were overlooking is now opon you.");
+        room[0][1].setDescription("The village you were overlooking is now upon you.");
 
 
         room[1][0].setNumber(3);
