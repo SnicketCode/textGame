@@ -40,6 +40,8 @@ class RoomsInit {
 
     	System.out.println();
         System.out.println(room[x][y].getDescription());
+        //System.out.println("Looking around you also see: " + getItems());
+
     }
 }
 
@@ -77,16 +79,24 @@ class Room {
     public String getDescription() {
         return this.description;
     }
-    
-    public void addItem(Item item)
-    {
-    	Items.add(item);
+
+    public void addItem(Item item) {
+        Items.add(item);
     }
-    
-    public void removeItem(Item item)
-    {
-    	Items.remove(item);
+
+    public void removeItem(Item item) {
+        Items.remove(item);
     }
+
+    /*public void getItems() {
+        for (int i = 0; i < Items.size(); i++) {
+            System.out.print(Items[i]);
+        }
+    }
+    */
+
+}
+
     
  
-}
+
