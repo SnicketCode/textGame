@@ -9,14 +9,17 @@ class RoomsInit {
     	// Initialize rooms
         for (int i = 0; i < WIDTH; i++) {
             for (int j = 0; j < HEIGHT; j++) {
-                room[i][j] = new Room(i, "", "");
+                room[i][j] = new Room(i, "", "", null);
             }
         }
 
         room[0][0].setNumber(1);
         room[0][0].setName("Hill");
         room[0][0].setDescription("You are on a hill. It overlooks a dreamy view of the village to the south.");
-        room[0][0].addItem(new Item("Pinecone", "It's prickly and it hurts."));
+        room[0][0].addItems(new Item("Pinecone", "Its prickly and it hurts."));
+        room[0][0].addItems(new Item("Error", "404"));
+
+        
 
 
 
@@ -38,8 +41,19 @@ class RoomsInit {
 
     public static void print(Room[][] room, int x, int y) {
 
+    	
     	System.out.println();
         System.out.println(room[x][y].getDescription());
+        System.out.println("Items in the vicinity: " + Item.getItemName());
+
+    }
+    
+
+    public static void printDet(Room[][] room, int x, int y) {
+
+    	
+        System.out.println("Items with notation: " + Item.getItemName() + " " + Item.getItemDescription());
+
     }
 }
 
@@ -48,9 +62,9 @@ class Room {
     private int number;
     private String name;
     private String description;
-    private ArrayList<Item> Items = new ArrayList<Item>();
+    public ArrayList<Item> items = new ArrayList<Item>();
 
-    public Room(int number, String name, String description) {
+    public Room(int number, String name, String description, ArrayList<String> items) {
 
     }
 
@@ -78,15 +92,18 @@ class Room {
         return this.description;
     }
     
-    public void addItem(Item item)
-    {
-    	Items.add(item);
+    public ArrayList<Item> getItems() {
+        return this.items;
     }
-    
-    public void removeItem(Item item)
-    {
-    	Items.remove(item);
+
+	public void removeItems(Item item) {
+		items.remove(item);
+	}
+	
+    public void addItems(Item item) {
+        items.add(item);
     }
+
     
  
 }

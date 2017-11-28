@@ -2,31 +2,39 @@ package game;
 
 public class Item {
 
-	private String name;
-	private String description;
+	private static String name;
+	private static String description;
 
 
 	public Item(String name, String description) {
 		super();
-		this.name = name;
-		this.description = description;
+		Item.name = name;
+		Item.description = description;
 	}
 
 
-	public String getName() {
+	public static String getItemName() {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setItemName(String name) {
+		Item.name = name;
 	}
 
-	public String getDescription() {
+	public static String getItemDescription() {
 		return description;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setItemDescription(String description) {
+		Item.description = description;
 	}
+	
+	
+	public String toString()
+	{
+		return name;
+	}
+
+
 
 }

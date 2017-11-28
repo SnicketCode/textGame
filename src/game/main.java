@@ -63,7 +63,9 @@ public class main {
             	System.out.println("Type 'n' or 'e' or 's' or 'w' to move around the \"map\"");
             	System.out.println("Type 'look' for a description of the \"room\" you're in");
             	System.out.println("Type 'quit' to terminate the program");
+            	System.out.println("Type 'look closer' for a closer look at items in the room");
             	System.out.println("There are some commands that can only be accessed by obtaining a special item");
+
             	System.out.println("------------------------------------------------------");
 
             }
@@ -71,6 +73,10 @@ public class main {
             // Look commands
             else if (input.equals("look")) {
                 RoomsInit.print(room, x, y);
+            }
+            
+            else if (input.equals("look closer")) {
+            	RoomsInit.printDet(room, x, y);
             }
 
 

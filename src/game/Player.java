@@ -32,7 +32,7 @@ public class Player {
 	}
 
 	public void takeItem(Room room, Item item) {
-		room.removeItem(item);
+		room.removeItems(item);
 		Inventory.add(item);
 	}
 	
