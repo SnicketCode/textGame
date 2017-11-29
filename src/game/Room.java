@@ -16,16 +16,21 @@ class RoomsInit {
 		room[0][0].setName("Hill");
 		room[0][0].setDescription("You are on a hill. It overlooks a dreamy view of the village to the south.");
 		room[0][0].addItems(new Item("Pinecone", "Its prickly and it hurts."));
-		room[0][0].addItems(new Item("Cookie", "It's trash"));
 
 		room[0][1].setName("Village");
 		room[0][1].setDescription("The village you were overlooking is now upon you.");
+		room[0][1].addItems(new Item("Key to the Village", "It's rustic with some oxidation"));
+
 
 		room[1][0].setName("House");
 		room[1][0].setDescription("Your house.");
+		room[1][0].addItems(new Item("Plate", "Fine china"));
+
 
 		room[1][1].setName("Cave Mouth");
 		room[1][1].setDescription("You are in the mouth of a damp cave.");
+		room[1][0].addItems(new Item("Wooden Stick", "Fine starter's combat kit"));
+
 
 	}
  
