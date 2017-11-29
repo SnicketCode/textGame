@@ -4,40 +4,38 @@ import java.util.ArrayList;
 
 public class Player {
 
-    private String name;
-    private String age;
+	private String name;
 
-    private ArrayList<Item> Inventory = new ArrayList<Item>();
+	private ArrayList<Item> Inventory = new ArrayList<Item>();
 
-    public Player(String name, String age) {
-        super();
-        this.name = name;
-        this.age = age;
-    }
+	public Player(String name) {
+		super();
+		this.name = name;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
-    }
-
-    public void takeItem(Room room, Item item) {
-        room.removeItems(item);
-        Inventory.add(item);
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
 
+	public void takeItem(Room room, Item item) {
+		room.removeItems(item);
+		Inventory.add(item);
+	}
 
+	
+	public void printInventory()
+	{
+		for(Item item : Inventory)
+		{
+				System.out.println("  " + item.getItemName() + ": " + item.getItemDescription());
 
+		}
+		
+	}
 }
 
