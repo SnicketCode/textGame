@@ -20,7 +20,7 @@ public class Main {
 		System.out.println("Jakub's Text Adventure");
 		
 
-		// Print starting room description generated from RoomInit Class
+		// Print starting room description generated from RoomInit Class TEST
 		rooms[x][y].printRoomDescription();
 
 		// Start game loop
