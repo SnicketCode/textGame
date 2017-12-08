@@ -4,6 +4,7 @@ public class Item {
 
 	private String name;
 	private String description;
+	private int damage;
 
 	//This is a push test from Windows to Mac
 	public Item(String name, String description) {
@@ -12,6 +13,12 @@ public class Item {
 		this.description = description;
 	}
 
+	public Item(String name, String description, int damage)
+	{
+		this.name = name;
+		this. description = description;
+		this.damage = damage;
+	}
 
 	public String getItemName() {
 		return name;
@@ -33,5 +40,10 @@ public class Item {
 	{
 		return name;
 	}
+
+	public boolean doesDamage()
+	{
+	}
+
 
 }
