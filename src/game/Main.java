@@ -18,7 +18,6 @@ public class Main {
 		
 		// My greedy credit
 		System.out.println("Jakub's Text Adventure");
-		
 
 		// Print starting room description generated from RoomInit Class TEST
 		rooms[x][y].printRoomDescription();
@@ -77,6 +76,11 @@ public class Main {
 			// Look commands
 			else if (input.equals("look")) {
 				rooms[x][y].printRoomDescription();
+			}
+
+			else if (input.equals("name"))
+			{
+				player.getName();
 			}
 			
 			else if (input.equals("look closer")) {

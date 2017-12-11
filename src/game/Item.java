@@ -1,23 +1,24 @@
 package game;
 
-public class Item {
+public class Item extends ItemGeneric {
 
 	private String name;
 	private String description;
-	private int damage;
+	private boolean doesDamage;
 
 	//This is a push test from Windows to Mac
-	public Item(String name, String description) {
-		super();
-		this.name = name;
-		this.description = description;
+
+	public Item(String name, String description)
+	{
+		super(name, description);
+
 	}
 
-	public Item(String name, String description, int damage)
+	public Item(String name, String description, boolean doesDamage)
 	{
-		this.name = name;
-		this. description = description;
-		this.damage = damage;
+		super(name, description);
+		this.doesDamage = doesDamage;
+
 	}
 
 	public String getItemName() {
@@ -40,10 +41,5 @@ public class Item {
 	{
 		return name;
 	}
-
-	public boolean doesDamage()
-	{
-	}
-
-
+	
 }
