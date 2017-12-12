@@ -14,6 +14,7 @@ public class Player {
 
 	private ArrayList<Item> Inventory = new ArrayList<Item>();
 
+	
 	public Player(String name, int maxHitPoints, int hitPoints, int numPotions, Item weapon) {
         super();
         this.name = name;

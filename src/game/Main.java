@@ -14,7 +14,7 @@ public class Main {
 		int y = 0;
 		final String takeCommandPrefix = "take ";
 		
-		Player player  = new Player("Jakub");
+		Player player  = new Player("Jakub", 10, 10, 0 , null);
 		
 		// My greedy credit
 		System.out.println("Jakub's Text Adventure");
