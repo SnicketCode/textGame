@@ -1,6 +1,6 @@
 package game;
 
-public class Item extends ItemGeneric {
+public class Item {
 
 	private String name;
 	private String description;
@@ -10,17 +10,10 @@ public class Item extends ItemGeneric {
 
 	public Item(String name, String description)
 	{
-		super(name, description);
-
+		this.name = name;
+		this.description = description;
 	}
-
-	public Item(String name, String description, boolean doesDamage)
-	{
-		super(name, description);
-		this.doesDamage = doesDamage;
-
-	}
-
+	
 	public String getItemName() {
 		return name;
 	}
