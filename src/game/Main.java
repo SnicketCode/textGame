@@ -17,7 +17,9 @@ public class Main {
 		Player player  = new Player("Jakub", 10, 10, 0 , null);
 		
 		// My greedy credit
-		System.out.println("Jakub's Text Adventure");
+		System.out.println("Layout for a text adventure!");
+		System.out.println("Edit the final int and for loop for generating rooms to make it your own.");
+
 
 		// Print starting room description generated from RoomInit Class TEST
 		rooms[x][y].printRoomDescription();
@@ -114,6 +116,7 @@ public class Main {
 			else if (input.equals("quit")) {
 				System.out.println("Thank you for playing!");
 				gameRunning = false;
+				//This breaks the loop and allows System.exit(0); to run!
 
 				// If all else fails, run this.
 			} else {
